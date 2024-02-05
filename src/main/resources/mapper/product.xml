@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.ProductMapper">
+<insert id="productAdd" parameterType="ReqProductAdd" useGeneratedKeys="true" keyColumn="product_sid" keyProperty="product_sid">
+INSERT INTO tb_product(
+	user_sid,
+	product_name,
+	option_sid,
+	single_color_yn,
+	delete_yn,
+	created_date,
+	modified_date
+)VALUSE(
+	#{user_sid},
+	#{product_name},
+	#{option_sid},
+	#{single_color_yn},
+	'N',
+	now(),
+	now()
+)
+</insert>
+
+</select>
+</mapper>
