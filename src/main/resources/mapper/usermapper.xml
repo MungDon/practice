@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.demo.mapper.UserMapper">
-<insert id="userInsert" parameterType="ReqUserInsert" useGeneratedKeys="true" keyColumn="user_sid" keyProperty="user_sid">
+<insert id="userInsert" parameterType="ReqUserAdd" useGeneratedKeys="true" keyColumn="user_sid" keyProperty="user_sid">
 	<!-- 유저 정보 저장(회원가입) -->
 	INSERT INTO tb_user(
 	user_email,
 	password,
-	user_name,
 	delete_yn,
 	created_date,
-	modified_date,
-	) VALUSE (
+	modified_date
+	) VALUES (
 	#{user_email},
 	#{password},
-	#{user_name},
-	'N',
+	'N', 
 	now(),
 	now()
 	)

@@ -21,8 +21,8 @@ public class ProductController {
 	}
 	
 	@PostMapping("/product")
-	public String productAdd(ReqProductAdd reqAdd){
-		productService.productAdd(reqAdd);
+	public String productAdd(ReqProductAdd reqAdd){ 
+		productService.productAdd(reqAdd); //서비스에 저장된 등록 데이터를 가져옴
 		return"redirect:/product/list";		
 		
 	}

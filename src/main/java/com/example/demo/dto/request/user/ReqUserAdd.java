@@ -7,14 +7,15 @@ import lombok.Setter;
 @Setter
 public class ReqUserAdd {
 	
-	private Long user_sid;  // 유저 sid
 	
-	private String user_email;	// 유저 이메일 아이디
+	private  Long user_sid;  // 유저 sid
 	
-	private String password;	// 유저 비밀번호
+	private  String user_email;	// 유저 이메일 아이디
+	
+	private  String password;	// 유저 비밀번호
 	
 	private String password2;	// 유저 비밀번호 확인용
 	
-
-
+	
 }
+ 

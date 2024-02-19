@@ -58,7 +58,7 @@ public class DataBaseConfig {
         // DB와 연결시킬 Mapper.XML파일의 위치를 설정해 스프링이 Mapper를 인식할 수 있게함.
         // context는 ApplicationContext로 IoC(컨테이너)를 담당, Bean의 생성 ,관계 설정을 한다
         factoryBean.setConfiguration(mybatisConfig());
-        factoryBean.setTypeAliasesPackage("com.example.admin.dto.request,com.example.admin.dto.response");
+        factoryBean.setTypeAliasesPackage("com.example.demo.dto.request,com.example.demo.dto.response");
         // myBatisConfig를 통해 읽어온 application프로퍼티의 설정을 Bean에 설정
         return factoryBean.getObject();
     }
